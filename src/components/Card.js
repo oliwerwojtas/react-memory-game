@@ -1,11 +1,18 @@
 import "./Card.css";
 
-const Card = (props) => {
+const Card = ({ card, handleChoice, flipped, disabled }) => {
+  const handleClick = () => {
+    if (!disabled) {
+      handleChoice(card);
+    }
+  };
+
   return (
     <div className="card">
-      <div>
-        <img className="front" src={props.src} alt="card front" />
-        <img className="back" src="/img/ball.png" alt="card back" />
+      <div className={flipped ? "flipped" : ""}>
+        <img className="front" src={card.src} alt="card front" />
+
+        <img className="back" src="/img/ball.png" onClick={handleClick} alt="card back" />
       </div>
     </div>
   );
