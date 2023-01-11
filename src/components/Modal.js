@@ -17,8 +17,9 @@ const Modal = () => {
         <div className="modal">
           <div className="overlay" onClick={toggleModal}></div>
           <div className="modal-content">
-            <h2>Hello modal</h2>
-            <p>eqrqwrqwrqwrqwrqrqw</p>
+            <h2 className="modal-header">Welcome!</h2>
+            <p className="modal-text">This is a simple memory game with NBA teams logo.</p>
+            <p className="modal-text">Let's have some fun!</p>
             <button className="close-modal" onClick={toggleModal}>
               close
             </button>
